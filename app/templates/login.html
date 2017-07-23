@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block content %}
+    <section class="hero is-info">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title">
+                    Login
+                </h1>
+            </div>
+        </div>
+    </section>
+
+    <div class="container" style="padding-left: 25%; padding-right: 25%; padding-top: 5%">
+        {{ form.username }}
+        {{ form.password }}
+        {{ form.recaptcha }}
+        {#            <div class="field">#}
+        {#                <label class="label">Email</label>#}
+        {#                <p class="control">#}
+        {#                    <input class="input is-info" type="text" placeholder="Username">#}
+        {#                </p>#}
+        {#            </div>#}
+        {#            <div class="field">#}
+        {#                <label class="label">Password</label>#}
+        {#                <p class="control">#}
+        {#                    <input class="input is-info" type="text" placeholder="Password">#}
+        {#                </p>#}
+        {#            </div>#}
+        <div class="field is-grouped">
+            <p class="control">
+                <a class="button is-info">Submit</a>
+            </p>
+            <p class="control">
+                <a class="button is-info" href="{{ url_for('signup') }}">Sign Up</a>
+            </p>
+        </div>
+    </div>
+{% endblock %}

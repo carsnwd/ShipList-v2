@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block content %}
+    <!--Map-->
+    <div id="mapid"></div>
+    <div class="overlay">
+        <div class="field">
+            <label class="label"><i class="fa fa-money" aria-hidden="true"></i> Max Rent</label>
+            <p class="control">
+                <input class="input" type="text" placeholder="Text input">
+            </p>
+        </div>
+        <div class="field">
+            <label class="label"><i class="fa fa-bed" aria-hidden="true"></i>
+                Bedrooms</label>
+            <p class="control">
+            <span class="select">
+              <select>
+                <option>Studio</option>
+                <option>One Bedroom</option>
+                  <option>Two Bedrooms</option>
+                  <option>Three Bedrooms</option>
+                  <option>Four or More Bedrooms</option>
+              </select>
+            </span>
+            </p>
+        </div>
+        <div class="field">
+            <label class="label"><i class="fa fa-bath" aria-hidden="true"></i>
+                Bathrooms</label>
+            <p class="control">
+            <span class="select">
+              <select>
+                <option>1</option>
+                <option>1.5</option>
+                  <option>2</option>
+                  <option>2.5</option>
+                  <option>3 or more</option>
+              </select>
+            </span>
+            </p>
+        </div>
+    </div>
+    <!--End of Map-->
+{% endblock %}
