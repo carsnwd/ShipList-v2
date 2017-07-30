@@ -11,28 +11,32 @@
     </section>
 
     <div class="container" style="padding-left: 25%; padding-right: 25%; padding-top: 5%">
-        {{ form.username }}
-        {{ form.password }}
-        {{ form.recaptcha }}
-        {#            <div class="field">#}
-        {#                <label class="label">Email</label>#}
-        {#                <p class="control">#}
-        {#                    <input class="input is-info" type="text" placeholder="Username">#}
-        {#                </p>#}
-        {#            </div>#}
-        {#            <div class="field">#}
-        {#                <label class="label">Password</label>#}
-        {#                <p class="control">#}
-        {#                    <input class="input is-info" type="text" placeholder="Password">#}
-        {#                </p>#}
-        {#            </div>#}
-        <div class="field is-grouped">
-            <p class="control">
-                <a class="button is-info">Submit</a>
-            </p>
-            <p class="control">
-                <a class="button is-info" href="{{ url_for('signup') }}">Sign Up</a>
-            </p>
-        </div>
+        <form action="/login" method="POST">
+            {{ form.csrf_token }}
+            <div class="field">
+                <label class="label">Email</label>
+                <p class="control">
+                    {{ form.username }}
+                </p>
+            </div>
+            <div class="field">
+                <label class="label">Password</label>
+                <p class="control">
+                    {{ form.password }}
+                </p>
+            </div>
+            <div class="field">
+                {{ form.recaptcha }}
+            </div>
+            <div class="field is-grouped">
+                <p class="control">
+                    {#<a type="submit" class="button is-info">Submit</a>#}
+                    {{ form.submit }}
+                </p>
+                <p class="control">
+                    <a class="button is-info" href="{{ url_for('signup') }}">Sign Up</a>
+                </p>
+            </div>
+        </form>
     </div>
 {% endblock %}

@@ -1,6 +1,6 @@
 WTF_CSRF_ENABLED = True
 SECRET_KEY = '~H;+=2NN8%wc+A2Hr,6bh*N96&@u<uH%'
-DB_USERNAME = 'shiplist'
+DB_USERNAME = 'postgres'
 DB_PASSWORD = 'q!?8BY?%sQv=z$X#qfMt&M8BZ?cUMW8t'
 DB_HOST = 'localhost'
 DB_PORT = '5432'

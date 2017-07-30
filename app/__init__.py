@@ -1,8 +1,6 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager
-from flask_script import Manager
-from flask_migrate import Migrate, MigrateCommand
 import config
 
 '''Flask'''
@@ -26,5 +24,5 @@ login_manager.init_app(app)
 
 '''Takes a unicode user id and returns the corresponding user object'''
 @login_manager.user_loader
-def load_user(user_id):
-    return models.User.get(user_id)
+def load_user(username):
+    return models.User.query.filter_by(username=username).first()
